@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
+
+{#    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"#}
+{#          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">#}
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<header>
+    <div class="name-site">CURVA HORIZONTAL CIRCULAR</div>
+
+    <nav>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox"/>
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+
+            <ul class="menu__box">
+                <li><a class="menu__item" href="#">Curva Circular Simples</a></li>
+                <li><a class="menu__item" href="#">Curva Circular com Transição</a></li>
+                <li><a class="menu__item" href="#">Superelevação</a></li>
+                <li><a class="menu__item" href="#">Superlargura</a></li>
+                <li><a class="menu__item" href="#">Curva Vertical</a></li>
+                <li><a class="menu__item" href="#">Terraplenagem</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section>
+    <div class="conteudo-1">
+        <div><h2>Entrada:</h2></div>
+        <form method="POST" action="javascript:curvaCircularSimples()">
+            <div class="form-group">
+                <label for="ac">AC:</label>
+                <input type="text" id="ac" name="ac">
+            </div>
+
+            <div class="form-group">
+                <label for="pi">PI:</label>
+                <input type="text" id="pi" name="pi">
+            </div>
+
+            <div class="form-group">
+                <label for="raio">RAIO:</label>
+                <input type="text" id="raio" name="raio">
+            </div>
+
+            <div class="form-group">
+                <label for="velocidade-projeto">Velocidade de Projeto:</label>
+                <input type="text" id="velocidade-projeto" name="velocidade-projeto">
+            </div>
+
+            <div class="form-group">
+                <label for="e-max">e_max:</label>
+                <input type="text" id="e-max" name="e-max">
+            </div>
+            <button class="btn btn-primary" type="submit">CALCULAR</button>
+        </form>
+    </div>
+    <div class="conteudo-2"><h2>Saída:</h2>
+
+        <div class="saidas">
+            <div class="form-group">
+                <label for="">PC:</label>
+                <input type="text" id="pc" value="" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="">PT:</label>
+                <input type="text" id="pt" value="" disabled>
+            </div>
+        </div>
+
+        <div class="pai-conteudo">
+            <div class="tabela" id="table">
+                {#                tabela e botão serão inseridos via javascript#}
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+
+</body>
+
+</html>

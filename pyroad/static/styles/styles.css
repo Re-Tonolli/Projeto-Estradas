@@ -1,0 +1,179 @@
+header {
+    height: 150px;
+    background-color: #70AD47;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    width: 100%;
+}
+
+section .conteudo-1 {
+    width: 30%;
+    background-color: rgb(68, 44, 156);
+    color: #fff;
+}
+
+
+.conteudo-1, .conteudo-2 h2 {
+    padding: 15px;
+}
+
+form div label {
+    margin-right: 20px;
+}
+
+form > div {
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+    margin-right: 40px;
+}
+
+section .conteudo-2 {
+    width: 70%;
+    background-color: rgb(33, 114, 114);
+}
+
+.conteudo-1 button {
+    width: 70%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.saidas {
+    display: flex;
+    justify-content: center;
+}
+
+.saidas div {
+    padding: 0px 20px;
+}
+
+.saidas label {
+    margin-right: 20px;
+}
+
+.pai-conteudo {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.tabela {
+    color: #fff;
+    height: 350px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.tabela table th, td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* hamburguer menu:  https://alvarotrigo.com/blog/hamburger-menu-css/ */
+
+#menu__toggle {
+    opacity: 0;
+}
+
+#menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+
+#menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+}
+
+.menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+}
+
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+}
+
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+
+.menu__item:hover {
+    background-color: #CFD8DC;
+}
+
+.Header {
+    background-color: rgba(0, 0, 0, 0.445);
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+header > div, nav {
+    display: inline-block;
+
+}
